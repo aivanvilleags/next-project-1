@@ -33,6 +33,18 @@
   z-index: 1;
 }
 
+
+.cardLayout{
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+}
+
+.card{
+  justify-content: center;
+}
+
 /** Breakpoints:
   sm: min-width: 640px;
   md: min-width: 768px;
@@ -62,6 +74,10 @@
       /* 24px */
     ;
   }
+
+  .cardLayout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 768px) {
@@ -82,6 +98,10 @@
 
   .heroImage{
     right: 20%;
+  }
+
+  .cardLayout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -108,5 +128,18 @@
   }
   .heroImage {
     right: 20%;
+  }
+
+  .cardLayout {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px){
+  .main{
+    margin-top: 7rem;
+  }
+  .cardLayout {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
